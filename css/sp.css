@@ -1,0 +1,582 @@
+﻿@charset "utf-8";
+/* CSS Document */
+* {
+	text-decoration: none;
+	color: black;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  border-collapse: collapse;
+  /*a border: 0px;*/
+  box-sizing: border-box;
+  word-wrap: break-word;
+  table-layout: fixed;
+  /*list-style: none;*/
+  /*-webkit-overflow-scrolling: touch;
+  appearance: none;*/
+  -webkit-appearance: none;
+  /*font-display: swap;*/
+}
+
+ol, ul {
+  list-style: none;
+}
+
+/**/
+.scroll-top {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    z-index: 100;
+    background-color: #999;
+		opacity: .8;
+		width: 60px;
+		height: 60px;
+		border-radius: 50%;
+		border: none;
+		color:
+    #fff;
+}
+.scroll-top:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+
+/*header*/
+
+header {
+  /*margin-bottom: 40px; */
+  z-index: 999;
+
+  -webkit-box-shadow: 0px 6px 6px -6px rgba(0, 0, 0, 0.2);
+}
+
+#top-logo {
+  text-align: center;
+  line-height: 60px;
+  font-size: 150%;
+  color: #00A0E9;
+  text-shadow: 1px 1px 1px;
+}
+
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #fff;
+  box-shadow: 0 2px 6px rgba(0,0,0,.16);
+}
+.global-nav {
+  position: fixed;
+  right: -320px; /* これで隠れる */
+  top: 0;
+  width: 300px; /* スマホに収まるくらい */
+  height: 100vh;
+  padding-top: 40px;
+  background-color: #fff;
+  transition: all .6s;
+  z-index: 900;
+  overflow-y: auto; /* メニューが多くなったらスクロールできるように */
+}
+.hamburger {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 50px; /* クリックしやすいようにちゃんと幅を指定する */
+  height: 50px; /* クリックしやすいようにちゃんと高さを指定する */
+  cursor: pointer;
+  z-index: 600;
+}
+.global-nav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.global-nav__item {
+  text-align: center;
+  padding: 0 -2px;
+  line-height: 500%;
+}
+.global-nav__item a {
+  display: block;
+  padding: -2px 0;
+  border-bottom: 1px solid #eee;
+  text-decoration: none;
+  color: #111;
+}
+.global-nav__item a:hover {
+  background-color: #eee;
+}
+.hamburger__line {
+  position: absolute;
+  left: 11px;
+  width: 18px;
+  height: 1px;
+  background-color: #111;
+  transition: all .6;
+}
+.hamburger__line--1 {
+  top: 14px;
+}
+.hamburger__line--2 {
+  top: 20px;
+}
+.hamburger__line--3 {
+  top: 26px;
+}
+.black-bg {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+  background-color: #000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .6s;
+  cursor: pointer;
+}
+/* 表示された時用のCSS */
+.nav-open .global-nav {
+  right: 0;
+}
+.nav-open .black-bg {
+  opacity: .8;
+  visibility: visible;
+}
+.nav-open .hamburger__line--1 {
+  transform: rotate(45deg);
+  top: 20px;
+}
+.nav-open .hamburger__line--2 {
+  width: 0;
+  left: 50%;
+}
+.nav-open .hamburger__line--3 {
+  transform: rotate(-45deg);
+  top: 20px;
+}
+
+/**/
+
+* {
+  padding: 0;
+  margin: 0;
+  border-collapse: collapse;
+  a: ;
+  /*border: 0px;*/
+  box-sizing: border-box;
+  word-wrap: break-word;
+  table-layout: fixed;
+  list-style: none;
+  /*-webkit-overflow-scrolling: touch;
+  appearance: none;*/
+  -webkit-appearance: none;
+  /*font-display: swap;*/
+}
+
+
+/**/
+
+img {
+  max-width: 100%;
+  /*height: auto;*/
+  vertical-align: middle;
+}
+
+a img {
+  border: 0;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.headcontent .logo img {
+  height: 80px;
+}
+
+.logo, .logo a {
+  text-align: center;
+  display: block;
+}
+
+.headcontent .tel a {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #ef7d0d;
+}
+
+.headcontent .about {
+  font-size: 0.8rem;
+  line-height: 0.9rem;
+  color: #333;
+}
+
+.submenu ul {
+  display: block;
+  margin: auto;
+  text-align: center;
+}
+
+.submenu ul li {
+  margin: 6px 0px;
+  flex: 1;
+  text-align: center;
+  background-color: #dbceb6;
+  color: #222;
+  border-radius: 50px;
+  padding: 12px 3px;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  display: inline-block;
+  width: 48% !important;
+  min-width: 100px;
+  max-width: 200px;
+}
+
+.headcontent {
+  /*width: 100%;*/
+  margin: auto;
+  max-width: 1280px;
+}
+
+.headcontent li:last-child {
+  text-align: center;
+}
+
+.headcontent li:last-child {
+  /*text-align: right;*/
+  padding: 12px;
+}
+
+.submenu ul li a {
+  display: block;
+  width: 100%;
+  text-align: center;
+  height: 100%;
+  color: #222;
+}
+
+.pc {
+  display: none;
+}
+
+.container {
+  width: 100%;
+  margin: auto;
+  padding: 12px;
+}
+
+.topmain {
+  position: static;
+  height: 420px;
+}
+.topmain {
+  background-color: #eee;
+  text-align: left;
+}
+.topmain>* {
+  background-image: url(../images/cal2.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom center;
+  padding: 18px;
+  height: 420px;
+  position: relative;
+  line-height: 1.2rem;
+}
+.topmain h1 {
+  margin-right: 0;
+  text-align: left;
+
+  color: #222;
+  font-size: 16px;
+}
+
+.topmain a.btn {
+  display: block;
+  background-color: #ef7d0d;
+  padding: 12px;
+  text-align: center;
+  color: white;
+  margin: 12px 0;
+}
+
+.box {
+  width: 100%;
+}
+.box>* {
+  padding: 18px;
+}
+.box>* {
+  max-width: 1280px;
+  min-width: 260px;
+  width: 100%;
+  margin: auto;
+  /*padding: 0px;*/
+}
+
+h3 {
+  font-size: 1.4rem;
+}
+h1, h2, h3, h4, h5 {
+  font-family: "FOT-筑紫ゴシック Pr5N D";
+  display: block;
+  margin: 36px auto 24px auto;
+}
+
+.top h3 {
+  margin: 24px 0 10px 0;
+  color: #ef7d0d;
+  text-align: center;
+}
+
+.aboutclinic dl {
+  display: block;
+  width: 100%;
+}
+.aboutclinic dl>*:nth-child(1) {
+  border-bottom: 0;
+  width: 100%;
+  padding: 0;
+  margin-top: 16px;
+  font-size: 0.9rem;
+  color: #ef7d0d;
+}
+.aboutclinic dl>* {
+  display: block;
+  /*width: 100%;*/
+}
+
+.aboutclinic dl>*:nth-child(2) {
+  width: 100%;
+  border-bottom: 1px solid #eee;
+  padding: 0;
+  padding-bottom: 16px;
+}
+
+
+.gallery {
+  background-color: #282c34;
+}
+
+
+.container {
+  width: 100%;
+  margin: auto;
+  padding: 12px;
+}
+
+.box {
+  width: 100%;
+}
+
+.box>* {
+  padding: 18px;
+}
+
+.prof .comment {
+  border: 1px solid #eee;
+}
+
+.prof .clinicname {
+  text-align: right;
+  font-size: .9rem;
+}
+
+.prof .comment h4 {
+  text-align: right;
+  font-size: 1.1rem;
+}
+
+
+.table {
+  display: block;
+  width: 100%;
+}
+
+.table>* {
+  display: block;
+  width: 100%;
+  padding: 6px;
+}
+
+.prof .comment>*:first-child {
+  padding-top: 24px;
+  width: 100%;
+}
+
+.prof .comment>*:first-child {
+  text-align: center;
+  /*width: 280px;*/
+  vertical-align: top;
+}
+
+.prof .comment img {
+  max-width: 260px;
+  margin: auto;
+}
+
+
+.cert {
+  background-color: #eee;
+}
+.prof .cert>* {
+  padding: 0 12px;
+  width: 100%;
+}
+.cert>* {
+  /*width: 32%;*/
+  vertical-align: top;
+  font-size: 0.8rem;
+  /*padding: 12px;*/
+}
+
+.cert h5 {
+  font-size: 1rem;
+  margin: 0;
+}
+
+
+
+
+.concept h4 {
+  background-color: #ef7d0d;
+  border-radius: 60px;
+  color: white;
+  padding: 12px 24px;
+  font-size: 1.2rem;
+  margin-top: 18px;
+}
+
+.concept img {
+  max-width: 360px;
+  width: 100%;
+}
+
+.concept .table>* {
+  padding: 24px;
+  /*width: 100%;*/
+}
+
+.concept .table>*:nth-child(2) {
+  width: 100%;
+}
+
+.blogscroll {
+  overflow: auto;
+  width: 100%;
+  background-color: #f6f6f6;
+}
+
+.blog {
+  display: block;
+  width: 100%;
+}
+
+.blog>* {
+  max-width: 420px;
+  min-width: 280px;
+  padding: 12px;
+  text-align: left;
+}
+
+.blogthumb {
+  text-align: center;
+}
+
+.blog h1 {
+  margin: 12px 0;
+  font-size: 1.1rem;
+}
+
+
+footer .obi {
+  /* background-color: #e3dfd5; */
+  border-bottom: 2px solid #ef7d0d;
+  margin-top: 24px;
+  padding-top: 12px;
+}
+
+footer .obi .table>*:nth-child(1) {
+  text-align: center;
+}
+
+footer .obi .table>*:nth-child(2) {
+  text-align: center;
+  color: #ef7d0d;
+  font-size: 1rem;
+}
+
+footer .obi .table>*:nth-child(3) {
+  text-align: center;
+}
+
+
+
+.timetable {
+  border-collapse: separate;
+  border-spacing: 5px;
+  width: 100%;
+}
+
+.timetable th:nth-child(1) {
+  width: 160px;
+}
+
+.timetable th {
+  background-color: #DBCEB6;
+  text-align: center;
+}
+
+.timetable th:nth-child(1) {
+  width: 160px;
+}
+
+.timetable td {
+  background-color: #E9E5DE;
+  text-align: center;
+}
+
+
+
+footer h4 {
+  border-bottom: 2px solid #ef7d0d;
+}
+
+.banners a {
+  display: inline-block;
+  width: 300px;
+}
+
+.banners img {
+	width: 100%;
+}
+
+footer .copyright {
+  text-align: center;
+}
+
+
+/*Animation*/
+
+body {
+    display:  block;                /* ブロック要素にする */
+    margin: 0 auto;                 /* 要素中央揃え */
+    position:  relative;            /* 位置指定 */
+    animation: anime1 1.5s ease;      /* アニメーション指定 */
+}
+@keyframes anime1 {
+    0% {
+        opacity:  0;                /* 透明度指定 */
+        top: 10px;                  /* 位置指定 */
+    }
+    100% {
+        opacity:  1;                /* 透明度指定 */
+        top: 0;                     /* 位置指定 */
+    }
+}

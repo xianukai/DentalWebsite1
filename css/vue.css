@@ -1,0 +1,21 @@
+﻿.VueCarousel-slide {
+  position: relative;
+  /*background: #42b983;*/
+  /*
+  background: white;
+  */
+  color: #fff;
+  font-family: Arial;
+  font-size: 24px;
+  text-align: center;
+  min-height: 300px;
+
+}
+
+.label {
+  position: absolute;
+  top:  50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+}
